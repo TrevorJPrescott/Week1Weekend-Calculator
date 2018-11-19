@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">WeekendWarrior1</string>
+    <string name="One">1</string>
+    <string name="disclaimer">Calculator works from left to right and does not use Order of Operations.</string>
+</resources>

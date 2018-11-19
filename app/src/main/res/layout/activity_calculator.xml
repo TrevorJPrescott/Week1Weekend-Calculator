@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".Calculator">
+
+    <TextView
+        android:id="@+id/tvDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="30dp"
+        android:layout_marginStart="14dp"
+        android:text="Display"/>
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvDisplay"
+        android:layout_marginStart="14dp"
+        android:textSize="25dp"
+        android:text="Result"/>
+<!-- Number Buttons-->
+    <GridLayout
+        android:id="@+id/NumGrid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="115dp"
+        android:columnCount="3">
+
+        <Button
+            android:id="@+id/btnOne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/btnOne"
+            android:layout_alignRight="@+id/btnFive"
+            android:layout_toEndOf="@+id/btnOne"
+            android:onClick="numBtn"
+            android:text="1" />
+
+
+        <Button
+            android:id="@+id/btnTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/btnOne"
+            android:layout_alignRight="@+id/btnFive"
+            android:layout_toEndOf="@+id/btnOne"
+            android:onClick="numBtn"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/btnThree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/btnTwo"
+            android:layout_toEndOf="@+id/btnTwo"
+            android:onClick="numBtn"
+            android:text="3" />
+
+        <Button
+            android:id="@+id/btnFour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnOne"
+            android:onClick="numBtn"
+            android:text="4" />
+
+        <Button
+            android:id="@+id/btnFive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+
+            android:layout_alignTop="@+id/btnFour"
+            android:layout_toEndOf="@+id/btnFour"
+            android:onClick="numBtn"
+            android:text="5" />
+
+        <Button
+            android:id="@+id/btnSix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/btnFive"
+            android:layout_toEndOf="@+id/btnFive"
+            android:onClick="numBtn"
+            android:text="6" />
+
+        <Button
+            android:id="@+id/btnSeven"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+
+            android:layout_below="@+id/btnFour"
+            android:onClick="numBtn"
+            android:text="7" />
+
+        <Button
+            android:id="@+id/btnEight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignTop="@+id/btnSeven"
+            android:layout_toEndOf="@+id/btnSeven"
+            android:onClick="numBtn"
+            android:text="8" />
+
+        <Button
+            android:id="@+id/btnNine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/btnEight"
+            android:layout_toEndOf="@+id/btnEight"
+            android:onClick="numBtn"
+            android:text="9" />
+
+        <Button
+            android:id="@+id/btnZero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnEight"
+            android:onClick="numBtn"
+            android:text="0" />
+
+
+    </GridLayout>
+
+    <Button
+        android:id="@+id/btnAnswer"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/NumGrid"
+        android:layout_toLeftOf="@+id/OpsGrid"
+        android:layout_marginTop="-48dp"
+        android:onClick="answerBtn"
+        android:text="=" />
+
+    <GridLayout
+        android:id="@+id/OpsGrid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/NumGrid"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="115dp"
+        android:columnCount="1">
+
+        <Button
+            android:id="@+id/btnMultiply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="opBtn"
+            android:text="*" />
+
+
+        <Button
+            android:id="@+id/btnDivision"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="opBtn"
+            android:text="/" />
+
+        <Button
+            android:id="@+id/btnAddition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="opBtn"
+            android:text="+" />
+
+        <Button
+            android:id="@+id/btnSubtraction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="opBtn"
+            android:text="-" />
+
+        <Button
+            android:id="@+id/btnDec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="decBtn"
+            android:text="." />
+
+
+    </GridLayout>
+
+
+<!--operations-->
+
+
+    <Button
+        android:id="@+id/btnClear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/NumGrid"
+        android:layout_toLeftOf="@id/OpsGrid"
+        android:layout_alignLeft="@id/NumGrid"
+        android:onClick="clear"
+        android:text="C" />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="14dp"
+    android:text="Calculator works from left to right and does not use Order of Operations"
+    android:layout_below="@id/btnClear"/>
+
+    <!-- Buttons to add in landscape mode
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="^"
+        android:onClick="opBtn"/>
+    -->
+
+
+
+
+
+</RelativeLayout>
